@@ -13,7 +13,7 @@
         const userAction = async () => {
             const response = await fetch('https://maartenjaspertestbackend.azurewebsites.net/endpoint');
             const myJson = await response.json(); //extract JSON from the http response
-            document.getElementById("output").innerHTML = myJson;
+            document.getElementById("output").innerHTML = "naam is: " + myJson['firstName'] + " " + myJson['lastName'];
             console.log(myJson)
         }
     </script>
